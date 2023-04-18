@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
     <title>Document</title>
 </head>
 
@@ -18,6 +20,49 @@
             <a href="accounting.html">accounting</a>
         </nav>
     </header>
+
+    <section>
+        <fieldset>
+            <legend>personal info</legend>
+            <form id="infoForm">
+                <div>
+                    <label for="fullname">Full name:</label>
+                    <input type="text" id="fullname" name="fullname">
+
+                    <label for="department">Department:</label>
+                    <select id="department" name="department">
+                        <option value="">Choose department</option>
+                        <option value="administration">Administration</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="development">Development</option>
+                        <option value="finance">Finance</option>
+                    </select>
+
+                    <label for="level">Level:</label>
+                    <select id="level" name="level">
+                        <option value="">Choose level</option>
+                        <option value="junior">Junior</option>
+                        <option value="mid-senior">Mid-Senior</option>
+                        <option value="senior">Senior</option>
+                    </select>
+
+                    <label for="imageurl">Image URL:</label>
+                    <input type="text" id="imageurl" name="imageurl">
+
+                </div>
+                <button type="submit">save</button>
+
+            </form>
+
+
+        </fieldset>
+    </section>
+    <section id="showinfo">
+
+    </section>
+
+
+
     <main>
         <div id="emp">
 
