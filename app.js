@@ -65,7 +65,6 @@ Employee.prototype.randomId = function () {
 }
 
 //render
-
 Employee.prototype.render = function () {
     const showinfo = document.getElementById('showinfo');
 
@@ -81,22 +80,18 @@ Employee.prototype.render = function () {
     p2.textContent = this.level
     const p3 = document.createElement('p')
     p3.textContent = this.salary
-    //adding the text  to the created element
+    //adding the text to the created element
     divEle.appendChild(h4Ele)
     divEle.appendChild(p1)
     divEle.appendChild(p2)
     divEle.appendChild(p3)
-    //for the img
-    const ulEle = document.createElement('ul');
-    divEle.appendChild(ulEle);
-    for (let i = 0; i < this.imageUrl.length; i++) {
-        const liEl = document.createElement('li');
-        ulEle.appendChild(liEl);
-        liEl.textContent = this.imageUrl[i]
-
-    }
-
+    //for the image
+    const imgEle = document.createElement('img');
+    imgEle.src = './assets/smily.png';
+    divEle.appendChild(imgEle);
 }
+
+
 
 //adding an employee
 var salaryTable = {
