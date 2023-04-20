@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reset.css">
-    <title>Document</title>
+    <title>Accounting Department</title>
 </head>
 
 
@@ -22,11 +22,73 @@
         </nav>
     </header>
     <main>
+        <div id="accounting-table">
+
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>Department Name</th>
+                        <th>Number of Employees</th>
+                        <th>Average Salary</th>
+                        <th>Total Salary</th>
+                    </tr>
+                </thead>
+
+                <tbody id="data-output">
+                    <tr>
+                        <td>Administration</td>
+                        <td>3</td>
+                        <td>$5000</td>
+                        <td>$15000</td>
+                    </tr>
+                    <tr>
+                        <td>Finance</td>
+                        <td>1</td>
+                        <td>$5000</td>
+                        <td>$5000</td>
+                    </tr>
+                    <tr>
+                        <td>Marketing</td>
+                        <td>1</td>
+                        <td>$5000</td>
+                        <td>$5000</td>
+                    </tr>
+                    <tr>
+                        <td>Development</td>
+                        <td>2</td>
+                        <td>$5000</td>
+                        <td>$10000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
     </main>
 
     <!-- Footer -->
     <footer>
+        <table id="dept-table">
+            <thead>
+                <tr>
+                    <th>Department Name</th>
+                    <th>Number of employees</th>
+                    <th>Total Salary</th>
+                    <th>Average</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Department rows will be added dynamically here -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td id="total-employees">7</td>
+                    <td id="total-salary">35000</td>
+                    <td id="average-salary">8750</td>
+                </tr>
+            </tfoot>
+        </table>
+
         <ul>
             <li><a href="#">Facebook</a></li>
             <li><a href="#">Twitter</a></li>
@@ -36,6 +98,7 @@
     </footer>
 
     <!-- JavaScript -->
+    <script src="./javascript/accounting.js"></script>
 
 </body>
 

@@ -40,23 +40,42 @@ var employee3 = new Employee("Tamara Ayoub", "Marketing", "Senior", "https://exa
 employee3.calculateSalary();
 var employee4 = new Employee("Safi Walid", "Administration", "Mid_Senior", "https://example.com/safi.jpg");
 employee4.calculateSalary();
+var employee5 = new Employee("Omar Zaid", "Development", "Senior", "https://example.com/safi.jpg");
+employee5.calculateSalary();
+var employee6 = new Employee("Rana Saleh", "Development", "Senior", "https://example.com/safi.jpg");
+employee6.calculateSalary();
+var employee7 = new Employee("Hadi Ahmad", "Administration", "Mid_Senior", "https://example.com/safi.jpg");
+employee7.calculateSalary();
 
 
 const employee1Par = document.createElement('p');
 const employee2Par = document.createElement('p');
 const employee3Par = document.createElement('p');
 const employee4Par = document.createElement('p');
+const employee5Par = document.createElement('p');
+const employee6Par = document.createElement('p');
+const employee7Par = document.createElement('p');
+
+
 
 employee1Par.textContent = employee1.employee_info();
 employee2Par.textContent = employee2.employee_info();
 employee3Par.textContent = employee3.employee_info();
 employee4Par.textContent = employee4.employee_info();
+employee5Par.textContent = employee5.employee_info();
+employee6Par.textContent = employee6.employee_info();
+employee7Par.textContent = employee7.employee_info();
+
 
 const parentEle = document.getElementById('emp');
 parentEle.appendChild(employee1Par);
 parentEle.appendChild(employee2Par);
 parentEle.appendChild(employee3Par);
 parentEle.appendChild(employee4Par);
+parentEle.appendChild(employee5Par);
+parentEle.appendChild(employee6Par);
+parentEle.appendChild(employee7Par);
+
 
 
 //random ID
@@ -110,6 +129,17 @@ function addNewEmp(e) {
     const newEmp = new Employee(fullname, department, level, imageurl)
     newEmp.randomId()
     newEmp.render()
+    // Create an object with the input values
+    const empData = {
+        fullname: fullname,
+        department: department,
+        level: level,
+        imageurl: imageurl
+    };
+
+    // Convert the object to a string and save it to the local storage
+    localStorage.setItem('newEmpData', JSON.stringify(empData));
+
     console.log(newEmp)
 }
 
@@ -117,6 +147,5 @@ function addNewEmp(e) {
 const infoForm = document.getElementById('infoForm');
 console.log(infoForm)
 infoForm.addEventListener('submit', addNewEmp);
-
 
 
